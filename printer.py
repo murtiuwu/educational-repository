@@ -26,7 +26,6 @@ def printer(fill_ink=0):
     printer.check_inc = check_ink
     return printer
 
-
 my_printer = printer(13)
 
 my_printer.write('hello')
@@ -34,3 +33,4 @@ my_printer.write('\nhello world')
 my_printer.fill(24)
 my_printer.write('\nhello world')
 my_printer.check_inc()
+

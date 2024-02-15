@@ -44,4 +44,4 @@ def pascal_triangle(floors):
 
 
 # print(pascal_triangle(6))
-pascal_triangle(12)
+pascal_triangle(10)
