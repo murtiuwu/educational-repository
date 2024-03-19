@@ -9,15 +9,10 @@ def find_a_palindrome(text):
             quantity = -999999999
             break
     for word in word_list:
+        if len(word) == 1:
+            quantity -= 1
+        quantity += [1 if word[i] is word[-(i+1)] else 0 for i in range((len(word) + 1) // 2)]
 
-        for i in range((len(word) + 1) // 2):
-            if len(word) == 1:
-                quantity -= 1
-                break
-            if word[i] != word[-(i+1)]:
-                quantity -= 1
-                break
-        quantity += 1
     return quantity
 
 

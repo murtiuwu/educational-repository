@@ -35,8 +35,10 @@ class Printer:
                     self.ink -= 1
                 write_file.write(self.splitter)
                 return self.ink
-        except Exception:
-            return f"file {text_file} doesn't exist"
+        except ActiveException:
+
+        except Exception as e:
+            return f"file {text_file}{e} doesn't exist"
 
     def read(self):
         with open(self.file, 'r') as print_file:
@@ -44,9 +46,9 @@ class Printer:
 
 
 my_printer = Printer('filik', 19)
-print(my_printer.write('read_filik'))
+print(my_printer.write('qwert'))
 print(my_printer.read())
 
 
-
+# active exception [Errno 2] No such file or directory: 'qwert'
 
